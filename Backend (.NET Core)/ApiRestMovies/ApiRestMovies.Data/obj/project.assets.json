@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "ApiRestMovies.Model/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/ApiRestMovies.Model.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ApiRestMovies.Model.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "ApiRestMovies.Model/1.0.0": {
+      "type": "project",
+      "path": "../ApiRestMovies.Model/ApiRestMovies.Model.csproj",
+      "msbuildProject": "../ApiRestMovies.Model/ApiRestMovies.Model.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "ApiRestMovies.Model >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\SHIIWITOCKZRAT\\.nuget\\packages\\": {}
@@ -33,7 +52,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\SHIIWITOCKZRAT\\Documents\\ApiAngular.Net\\Backend (.NET Core)\\ApiRestMovies\\ApiRestMovies.Model\\ApiRestMovies.Model.csproj": {
+              "projectPath": "C:\\Users\\SHIIWITOCKZRAT\\Documents\\ApiAngular.Net\\Backend (.NET Core)\\ApiRestMovies\\ApiRestMovies.Model\\ApiRestMovies.Model.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
