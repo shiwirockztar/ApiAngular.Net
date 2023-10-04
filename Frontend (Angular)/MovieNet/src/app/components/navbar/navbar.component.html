@@ -1,36 +1,18 @@
 <mat-toolbar color="primary">
-  <a
-    [routerLink]="'/'"
-    mat-icon-button
-    class="example-icon"
-    arial-label="Example icon-button with menu icon"
-  >
-    <mat-icon> <span class="material-symbols-outlined"> movie </span></mat-icon>
-  </a>
-  <span>MovieNet</span>
-  <span class="example-spacer"></span>
-
-  <a
-    [routerLink]="'/signup'"
-    mat-icon-button
-    class="example-icon favorite-icon mr20 ml70"
-    aria-label="Example icon-button with heart icon"
-  >
-    Registrar
-  </a>
-  <a
-    [routerLink]="'/login'"
-    mat-icon-button
-    class="example-icon favorite-icon"
-    aria-label="Example icon-button with heart icon"
-    >Iniciar sesión
-  </a>
-  <a
-    style="margin-right: 50px"
-    mat-icon-button
-    class="example-icon favorite-icon"
-    aria-label="Example icon-button with heart icon"
-  >
-    Cerrar session
-  </a>
+  <div class="content">
+    <div class="content-left">
+      <a [routerLink]="'/welcome'">
+        <mat-icon>
+          <span class="material-symbols-outlined"> movie </span></mat-icon
+        >
+      </a>
+      <span [routerLink]=""><a [routerLink]="''">MovieNet</a></span>
+    </div>
+    <!-- <span class="example-spacer"></span> -->
+    <div class="content-right">
+      <a [routerLink]="'/signup'" style="margin-right: 40px"> Registrar </a>
+      <a [routerLink]="'/login'" style="margin-right: 40px">Iniciar sesión </a>
+      <a style="margin-right: 40px"> Cerrar sesión </a>
+    </div>
+  </div>
 </mat-toolbar>
