@@ -1,0 +1,19 @@
+/**/
+.example-spacer {
+  flex: 1 1 auto;
+  gap: 40px;
+}
+
+.mat-mdc-icon-button.mat-mdc-button-base {
+  width: 9%;
+  font-size: 20px;
+}
+
+.mat-mdc-button.mat-unthemed {
+  --mdc-text-button-label-text-color: #fff;
+  font-size: 16px;
+}
+.mat-toolbar-row,
+.mat-toolbar-single-row {
+  align-items: baseline;
+}

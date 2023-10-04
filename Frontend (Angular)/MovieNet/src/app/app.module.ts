@@ -20,9 +20,10 @@ import { MatSelectModule } from '@angular/material/select';
 
 // Components
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { HomeComponent } from './pages/home/home.component';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent],
+  declarations: [AppComponent, NavbarComponent, HomeComponent],
   imports: [
     MatListModule,
     BrowserModule,
