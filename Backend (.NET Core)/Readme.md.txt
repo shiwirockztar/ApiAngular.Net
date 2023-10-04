@@ -1,0 +1,7 @@
+- Crear un API RESTful que proporcione endpoints para:
+- Registro de usuarios.
+- Inicio de sesión de usuarios.
+- Obtener una lista de películas populares desde la API pública de películas.
+- Buscar películas por título desde la API pública de películas.
+- Obtener detalles de una película por su ID desde la API pública de películas.
+- Almacenar información de usuario y películas guardadas en una base de datos.
