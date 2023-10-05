@@ -26,40 +26,26 @@ namespace ApiRestMovies.Controllers
             var httpClient = new HttpClient();
             var url = "https://api.themoviedb.org/3/movie/popular?api_key=192e0b9821564f26f52949758ea3c473&language=es-MX&page=$1";
             var response = await httpClient.GetAsync(url);
-
             return Ok(await response.Content.ReadAsStringAsync());
         }
 
         [HttpGet("{id}")]
         public async Task<IActionResult> GetMovieById(int id)
         {
-            /*var client = new HttpClient();
-            var request = new HttpRequestMessage
-            {
-                Method = HttpMethod.Get,
-                RequestUri = new Uri("https://api.themoviedb.org/3/find/external_id?external_source={id}"),
-                Headers =
-                {
-                    { "accept", "application/json" },
-                    { "Authorization", "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4MjczNzU4ODA2MGM3ZjdmZTY1NWE0ZWI0NWIyMDEwYSIsInN1YiI6IjY1MWUzODVjMmYzYjE3MDExZTIxOGY5NCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.EP_BPM-PINgV-E561EK4jE8SwDIeQQ1osVwFTmoaVh0" },
-                },
-            };
-            using (var response = await client.SendAsync(request))
-            {
-                response.EnsureSuccessStatusCode();
-                var body = await response.Content.ReadAsStringAsync();
-                Console.WriteLine(body);
-                return Ok(await response.Content.ReadAsStringAsync());
-                
-            }*/
-
             var httpClient = new HttpClient();
-            var url = "https://api.themoviedb.org/3/movie/{id}?api_key=192e0b9821564f26f52949758ea3c473";
+            var url = $"https://api.themoviedb.org/3/movie/{id}?api_key=192e0b9821564f26f52949758ea3c473";
             var response = await httpClient.GetAsync(url);
-
             return Ok(await response.Content.ReadAsStringAsync());
         }
 
-        
+        [HttpGet("keyword/{keyword}")]
+        public async Task<IActionResult> GetMovieByKeyword(string keyword)
+        {
+            var httpClient = new HttpClient();
+            var url = $"https://api.themoviedb.org/3/search/movie?api_key=192e0b9821564f26f52949758ea3c473&query={keyword}";
+            var response = await httpClient.GetAsync(url);
+            return Ok(await response.Content.ReadAsStringAsync()); 
+        }
+
     }
 }
