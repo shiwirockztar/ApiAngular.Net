@@ -9,6 +9,7 @@ namespace ApiRestMovies.Data.Repositories
 {
     public interface IMovieRepository
     {
+        Task<IEnumerable<Movie>> GetPopularMovies();
         Task<IEnumerable<Movie>> GetMovies(int id);
         Task<Movie> GetMovieByTitle(string title);
         Task<Movie> GetMovieById(int id);

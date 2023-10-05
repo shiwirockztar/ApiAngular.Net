@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace ApiRestMovies.Model
 {
-    internal class Movie
+    public class Movie
     {
+        public int IdMovie { get; set; }
+        public string Title { get; set; }
+        public string Description { get; set; }
+
     }
 }

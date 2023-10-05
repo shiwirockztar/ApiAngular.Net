@@ -1,0 +1,11 @@
+C:\Users\SHIIWITOCKZRAT\Documents\ApiAngular.Net\Backend (.NET Core)\ApiRestMovies\ApiRestMovies.Model\bin\Debug\net6.0\ApiRestMovies.Model.deps.json
+C:\Users\SHIIWITOCKZRAT\Documents\ApiAngular.Net\Backend (.NET Core)\ApiRestMovies\ApiRestMovies.Model\bin\Debug\net6.0\ApiRestMovies.Model.dll
+C:\Users\SHIIWITOCKZRAT\Documents\ApiAngular.Net\Backend (.NET Core)\ApiRestMovies\ApiRestMovies.Model\bin\Debug\net6.0\ApiRestMovies.Model.pdb
+C:\Users\SHIIWITOCKZRAT\Documents\ApiAngular.Net\Backend (.NET Core)\ApiRestMovies\ApiRestMovies.Model\obj\Debug\net6.0\ApiRestMovies.Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\SHIIWITOCKZRAT\Documents\ApiAngular.Net\Backend (.NET Core)\ApiRestMovies\ApiRestMovies.Model\obj\Debug\net6.0\ApiRestMovies.Model.AssemblyInfoInputs.cache
+C:\Users\SHIIWITOCKZRAT\Documents\ApiAngular.Net\Backend (.NET Core)\ApiRestMovies\ApiRestMovies.Model\obj\Debug\net6.0\ApiRestMovies.Model.AssemblyInfo.cs
+C:\Users\SHIIWITOCKZRAT\Documents\ApiAngular.Net\Backend (.NET Core)\ApiRestMovies\ApiRestMovies.Model\obj\Debug\net6.0\ApiRestMovies.Model.csproj.CoreCompileInputs.cache
+C:\Users\SHIIWITOCKZRAT\Documents\ApiAngular.Net\Backend (.NET Core)\ApiRestMovies\ApiRestMovies.Model\obj\Debug\net6.0\ApiRestMovies.Model.dll
+C:\Users\SHIIWITOCKZRAT\Documents\ApiAngular.Net\Backend (.NET Core)\ApiRestMovies\ApiRestMovies.Model\obj\Debug\net6.0\refint\ApiRestMovies.Model.dll
+C:\Users\SHIIWITOCKZRAT\Documents\ApiAngular.Net\Backend (.NET Core)\ApiRestMovies\ApiRestMovies.Model\obj\Debug\net6.0\ApiRestMovies.Model.pdb
+C:\Users\SHIIWITOCKZRAT\Documents\ApiAngular.Net\Backend (.NET Core)\ApiRestMovies\ApiRestMovies.Model\obj\Debug\net6.0\ref\ApiRestMovies.Model.dll

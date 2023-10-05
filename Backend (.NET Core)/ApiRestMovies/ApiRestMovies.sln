@@ -5,6 +5,10 @@ VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiRestMovies", "ApiRestMovies\ApiRestMovies.csproj", "{EE394AEB-2379-4BC6-9A1C-5FC58B458A5B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiRestMovies.Data", "ApiRestMovies.Data\ApiRestMovies.Data.csproj", "{4D795DE2-8F61-4E8F-986F-80919BCC0F72}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiRestMovies.Model", "ApiRestMovies.Model\ApiRestMovies.Model.csproj", "{3BCA95BE-B439-45BE-A4F3-96F151F51C5E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{EE394AEB-2379-4BC6-9A1C-5FC58B458A5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE394AEB-2379-4BC6-9A1C-5FC58B458A5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EE394AEB-2379-4BC6-9A1C-5FC58B458A5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D795DE2-8F61-4E8F-986F-80919BCC0F72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D795DE2-8F61-4E8F-986F-80919BCC0F72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D795DE2-8F61-4E8F-986F-80919BCC0F72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D795DE2-8F61-4E8F-986F-80919BCC0F72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BCA95BE-B439-45BE-A4F3-96F151F51C5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BCA95BE-B439-45BE-A4F3-96F151F51C5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BCA95BE-B439-45BE-A4F3-96F151F51C5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BCA95BE-B439-45BE-A4F3-96F151F51C5E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
