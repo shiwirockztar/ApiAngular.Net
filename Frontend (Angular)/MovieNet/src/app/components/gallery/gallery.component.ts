@@ -25,15 +25,7 @@ export class GalleryComponent {
     private router: Router
   ) {}
 
-  // private nav: NavbarComponent,
-
   ngOnInit(): void {
-    // this.nav.findListB.subscribe((valor) => {
-    //   this.listadoB$ = valor;
-    //   console.log('nuevo valor', this.listadoB);
-    // });
-
-    this.observerChange();
     this.answerNet.cargarPelisPop(this.pagina).subscribe((res: any) => {
       if (res) {
         this.listado = res.results;
@@ -42,17 +34,6 @@ export class GalleryComponent {
         console.log('Hubo un error y no sabemos que paso');
       }
     });
-  }
-
-  observerChange() {
-    // setInterval(() => {
-    //   if (this.ListSearch) {
-    //     setTimeout(this.observador, 2000);
-    //     console.log('hay una busqueda', this.ListSearch);
-    //   } else {
-    //     console.log('No hay una busqueda');
-    //   }
-    // }, 500);
   }
 
   // Creamos el observador

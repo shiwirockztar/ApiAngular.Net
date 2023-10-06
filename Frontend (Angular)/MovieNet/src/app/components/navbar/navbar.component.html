@@ -6,7 +6,7 @@
           <span class="material-symbols-outlined"> movie </span></mat-icon
         >
       </a>
-      <span [routerLink]=""><a [routerLink]="''">MovieNet</a></span>
+      <span><a [routerLink]="''">MovieNet</a></span>
     </div>
     <div class="content-center">
       <input
@@ -17,9 +17,9 @@
     </div>
     <!-- <span class="example-spacer"></span> -->
     <div class="content-right">
-      <a [routerLink]="'/signup'" style="margin-right: 40px"> Registrar </a>
-      <a [routerLink]="'/login'" style="margin-right: 40px">Iniciar sesión </a>
-      <a style="margin-right: 40px"> Cerrar sesión </a>
+      <a [routerLink]="'/signup'" style="margin-right: 0px"> Registrar </a>
+      <a [routerLink]="'/login'" style="margin-right: 0px">Iniciar sesión </a>
+      <a style="margin-right: 0px" *ngIf="sign"> Cerrar sesión </a>
     </div>
   </div>
 </mat-toolbar>

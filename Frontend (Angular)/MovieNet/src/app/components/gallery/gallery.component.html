@@ -1,4 +1,11 @@
 <div class="contenedor" id="contenedor">
+  <div *ngFor="let num of ListSearch; let indice = index" class="pelicula">
+    <img
+      class="poster"
+      src="https://image.tmdb.org/t/p/w500/{{ num.poster_path }}"
+    />
+    <h3 class="titulo">{{ num.title }}</h3>
+  </div>
   <!-- [nombre]="findList" -->
   <div *ngFor="let num of listado; let indice = index" class="pelicula">
     <img
