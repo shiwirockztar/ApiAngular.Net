@@ -8,6 +8,11 @@
   display: flex;
   justify-content: space-between;
 }
+.content-center {
+  display: flex;
+  width: 35vw;
+  justify-content: flex-end;
+}
 .content-right {
   display: flex;
   width: 35vw;

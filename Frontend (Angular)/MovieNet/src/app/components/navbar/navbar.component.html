@@ -8,6 +8,13 @@
       </a>
       <span [routerLink]=""><a [routerLink]="''">MovieNet</a></span>
     </div>
+    <div class="content-center">
+      <input
+        type="text"
+        [formControl]="control"
+        placeholder="Buscar pelicula"
+      />
+    </div>
     <!-- <span class="example-spacer"></span> -->
     <div class="content-right">
       <a [routerLink]="'/signup'" style="margin-right: 40px"> Registrar </a>

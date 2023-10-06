@@ -8,8 +8,8 @@ import { ApiMovieDbUrl, api_key, language } from './helper';
 export class ApiThemoviedbService {
   constructor(private http: HttpClient) {}
 
-  //generamos lista de jugadores
-  public cargarPeliculas(pagina: any) {
+  // Obtenemos lista peliculas
+  public cargarUltimasPelis(pagina: any) {
     return this.http.get(
       `${ApiMovieDbUrl}api_key=${api_key}&language=${language}&page=${pagina}`
     );

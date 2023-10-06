@@ -24,6 +24,15 @@ namespace ApiRestMovies.Controllers
         public async Task<IActionResult> GetPopularMovies()
         {
             var httpClient = new HttpClient();
+            var url = "https://api.themoviedb.org/3/movie/top_rated?api_key=192e0b9821564f26f52949758ea3c473&language=es-MX&page=$1";
+            var response = await httpClient.GetAsync(url);
+            return Ok(await response.Content.ReadAsStringAsync());
+        }
+
+        [HttpGet("/")]
+        public async Task<IActionResult> GetLastMovies()
+        {
+            var httpClient = new HttpClient();
             var url = "https://api.themoviedb.org/3/movie/popular?api_key=192e0b9821564f26f52949758ea3c473&language=es-MX&page=$1";
             var response = await httpClient.GetAsync(url);
             return Ok(await response.Content.ReadAsStringAsync());

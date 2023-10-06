@@ -17,6 +17,19 @@ builder.Services.AddScoped<IMovieRepository, MovieRepository>();
 
 //builder.Services.AddSingleton(new MySqlConnection(builder.Configuration.GetConnectionString("MySqlConnection")));
 
+
+// Habilitando cors con la politica
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("NuevaPolitica", app =>
+    {
+        app.AllowAnyOrigin()
+        .AllowAnyHeader()
+        .AllowAnyMethod();
+    });
+});
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -27,6 +40,9 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+// Habilitando cors con la politica
+app.UseCors("NuevaPolitica");
 
 app.UseAuthorization();
 
