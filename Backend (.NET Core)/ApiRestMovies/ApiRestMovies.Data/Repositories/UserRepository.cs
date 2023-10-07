@@ -52,8 +52,7 @@ namespace ApiRestMovies.Data.Repositories
             }
             else 
             {
-                //Console.WriteLine(usuario.Name, "usuario encontrado", usuario.Password);
-                return null; 
+                throw new NotImplementedException();
             }
             
             
@@ -82,5 +81,14 @@ namespace ApiRestMovies.Data.Repositories
             
         }
 
+       
+        public async Task<User> GetUserById(int id)
+        {
+            var db = dbConnection();
+            var sql = @" SELECT name, email, password 
+                        FROM user 
+                        WHERE IdUser = @IdUser";
+            return await db.QueryFirstOrDefaultAsync<User>(sql, new { IdUser = id });
+        } 
     }
 }

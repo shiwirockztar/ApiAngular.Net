@@ -84,6 +84,13 @@ namespace ApiRestMovies.Controllers
             };
         }
 
- 
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetMoviesOfUser(int id)
+        {
+            var user = await _userRepository.GetUserById(id);
+            Console.WriteLine(user.Movies);
+            return Ok(await _userRepository.GetUserById(id));
+        }
     }
 }

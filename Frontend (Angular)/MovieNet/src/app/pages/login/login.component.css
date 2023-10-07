@@ -1,0 +1,66 @@
+/*----------  login Styles  ----------*/
+.login-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0575e6;
+  background: -webkit-linear-gradient(to right, #021b79, #0575e6);
+  background: linear-gradient(to right, #021b79, #0575e6);
+}
+mat-card {
+  width: 95%;
+  max-width: 320px;
+  height: auto;
+  border: 1px solid var(--border-color);
+  /* background-color: #fff; */
+  border-radius: 4px;
+  padding: 15px;
+  color: var(--accent-color);
+}
+
+.btnRegister {
+  /* width: 50%; */
+  /* padding: 10px 0; */
+  /* display: block; */
+  margin: 0 auto;
+  border-radius: 3px;
+  margin-top: 30px;
+  background-color: transparent;
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+  transition: all 0.2s ease-out;
+}
+
+.btnRegister:hover {
+  background-color: var(--indigo);
+  border: 1px solid var(--indigo);
+  text-decoration: none;
+  color: #fff;
+}
+.btnRegister:active,
+.btnRegister:focus {
+  outline: none;
+}
+a {
+  color: #20c997;
+  cursor: pointer;
+}
+
+.btnReset {
+  transition: all 0.2s ease-out;
+}
+
+.btnReset:hover {
+  background-color: var(--indigo);
+  border: 1px solid var(--indigo);
+  text-decoration: none;
+  color: #fff;
+}
+
+.text-center {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}

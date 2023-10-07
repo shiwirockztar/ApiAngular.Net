@@ -17,9 +17,11 @@
     </div>
     <!-- <span class="example-spacer"></span> -->
     <div class="content-right">
-      <a [routerLink]="'/signup'" style="margin-right: 0px"> Registrar </a>
-      <a [routerLink]="'/login'" style="margin-right: 0px">Iniciar sesión </a>
-      <a style="margin-right: 0px" *ngIf="sign"> Cerrar sesión </a>
+      <a [routerLink]="'/login'" style="margin-right: 0px"> Registrar </a>
+      <a [routerLink]="'/Signin'" style="margin-right: 0px">Iniciar sesión </a>
+      <a style="margin-right: 0px" *ngIf="sign" (click)="logOut()">
+        Cerrar sesión
+      </a>
     </div>
   </div>
 </mat-toolbar>

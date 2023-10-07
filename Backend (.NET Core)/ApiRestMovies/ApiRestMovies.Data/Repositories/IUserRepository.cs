@@ -13,6 +13,7 @@ namespace ApiRestMovies.Data.Repositories
         Task<bool> Login(User user);
         Task<IEnumerable<User>> getUsers();
         Task<User> getUser(String Name, String Password);
+        Task<User> GetUserById(int id);
 
     }
 }

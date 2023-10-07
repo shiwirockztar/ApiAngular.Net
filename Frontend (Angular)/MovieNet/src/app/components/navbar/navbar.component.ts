@@ -59,4 +59,8 @@ export class NavbarComponent {
       this.enviar.emit(this.findList);
     }
   }
+
+  logOut() {
+    localStorage.removeItem('token');
+  }
 }

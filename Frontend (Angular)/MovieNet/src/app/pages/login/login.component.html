@@ -1,0 +1,121 @@
+<div class="login-container">
+  <mat-card class="card">
+    <div class="container text-center">
+      <img src="../../../assets/registro.png" width="100" height="100" />
+    </div>
+    <p class="text-center">Crea tu cuenta</p>
+    <form (ngSubmit)="formSubmit()">
+      <mat-form-field class="full-width" appearance="outline">
+        <mat-label>Nombre de usuario</mat-label>
+
+        <input
+          [(ngModel)]="registerData.name"
+          name="username"
+          required
+          #nickname
+          matInput
+          placeholder="Digite su nombre de usuario"
+        />
+        <mat-hint>El nombre de usuario debe ser valido</mat-hint>
+      </mat-form-field>
+
+      <mat-form-field class="full-width" appearance="outline">
+        <mat-label>Seudonimo</mat-label>
+
+        <input
+          [(ngModel)]="registerData.nick"
+          name="nick"
+          required
+          #nickname
+          matInput
+          placeholder="Digite su alias o seudonimo"
+        />
+      </mat-form-field>
+
+      <mat-form-field class="full-width" appearance="outline">
+        <mat-label>Contraseña</mat-label>
+        <!--lock_open, done_outline,input,  https-->
+        <input
+          [(ngModel)]="registerData.password"
+          name="password"
+          required
+          type="password"
+          matInput
+          placeholder="Digite su contraseña"
+        />
+        <mat-hint>Las contraseñas deben ser similares</mat-hint>
+      </mat-form-field>
+
+      <mat-form-field class="full-width" appearance="outline">
+        <mat-label>Contraseña</mat-label>
+        <!--lock_open, done_outline,input,  https-->
+        <input
+          [(ngModel)]="registerData.confirm"
+          name="confirm"
+          required
+          type="confirm"
+          matInput
+          placeholder="Repetir contraseña"
+        />
+      </mat-form-field>
+
+      <mat-form-field class="full-width" appearance="outline">
+        <mat-label>Email</mat-label>
+        <input
+          required
+          [(ngModel)]="registerData.email"
+          name="email"
+          type="email"
+          type="email"
+          matInput
+          placeholder="Digite su correo"
+        />
+      </mat-form-field>
+
+      <mat-form-field class="full-width" appearance="outline">
+        <mat-label>Telefono</mat-label>
+        <input
+          required
+          [(ngModel)]="registerData.telefono"
+          name="telefono"
+          matInput
+          placeholder="Digite su telefono"
+        />
+      </mat-form-field>
+
+      <div class="container text-center">
+        <button
+          class="btnRegister"
+          mat-raised-button
+          color="accent"
+          mat-raised-button
+          color="primary"
+        >
+          Signup
+        </button>
+        <button
+          class="btnReset"
+          style="width: 50%"
+          type="reset"
+          mat-raised-button
+          color="accent"
+        >
+          Limpiar
+        </button>
+        <!-- <button
+            class="btnLogin"
+            type="submit"
+            mat-raised-button
+            color="primary"
+          >
+            Login
+          </button> -->
+      </div>
+    </form>
+    <br />
+    <div class="links">
+      <a (click)="linkSignIn()">Inicia sesion</a>
+      <br />
+    </div>
+  </mat-card>
+</div>

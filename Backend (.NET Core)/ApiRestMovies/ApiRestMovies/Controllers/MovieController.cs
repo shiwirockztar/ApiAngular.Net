@@ -5,6 +5,7 @@ using System.Text.Json;
 using System.Net.Http.Json; // Este namespace permite trabajar con JSON
 using System.Net.Http;
 using System.Net.Http.Headers;
+using ApiRestMovies.Model;
 
 namespace ApiRestMovies.Controllers
 {
@@ -13,11 +14,9 @@ namespace ApiRestMovies.Controllers
     public class MovieController : ControllerBase
     {
         private readonly IMovieRepository _movieRepository;
-        //private readonly HttpClient _httpClient;
         public MovieController(IMovieRepository movieRepository)
         {
             _movieRepository = movieRepository;
-            //_httpClient = httpClient;
         }
 
         [HttpGet]
@@ -54,6 +53,28 @@ namespace ApiRestMovies.Controllers
             var url = $"https://api.themoviedb.org/3/search/movie?api_key=192e0b9821564f26f52949758ea3c473&query={keyword}";
             var response = await httpClient.GetAsync(url);
             return Ok(await response.Content.ReadAsStringAsync()); 
+        }
+
+        [HttpPost("save")]
+        public async Task<IActionResult> SaveMovie([FromBody] Movie movie)
+        {
+            if (movie == null)
+                return BadRequest();
+
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            var created = await _movieRepository.InsertMovie(movie);
+
+            return Created("created", created);
+        }
+
+        [HttpGet("GetMovies/{id}")]
+        public async Task<IActionResult> GetMoviesOfUser(int id)
+        {
+            //var user = await _movieRepository.GetMovies(id);
+            //Console.WriteLine(user.Movies);
+            return Ok(await _movieRepository.GetMovies(id));
         }
 
     }

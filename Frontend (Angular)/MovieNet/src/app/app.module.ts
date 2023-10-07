@@ -23,6 +23,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './pages/home/home.component';
 import { WelcomeComponent } from './pages/welcome/welcome.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
+import { LoginComponent } from './pages/login/login.component';
+import { SigninComponent } from './pages/signin/signin.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,8 @@ import { GalleryComponent } from './components/gallery/gallery.component';
     HomeComponent,
     WelcomeComponent,
     GalleryComponent,
+    LoginComponent,
+    SigninComponent,
   ],
   imports: [
     MatListModule,
