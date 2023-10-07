@@ -9,8 +9,10 @@ namespace ApiRestMovies.Data.Repositories
 {
     public interface IUserRepository
     {
-        Task<bool> SignIn(User user);
+        Task<User> SignIn(User user);
         Task<bool> Login(User user);
+        Task<IEnumerable<User>> getUsers();
+        Task<User> getUser(String Name, String Password);
 
     }
 }

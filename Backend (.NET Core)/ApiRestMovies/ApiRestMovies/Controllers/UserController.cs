@@ -2,6 +2,12 @@
 using ApiRestMovies.Model;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.IdentityModel.Tokens;
+using Newtonsoft.Json;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
+using System.Xml.Linq;
 
 namespace ApiRestMovies.Controllers
 {
@@ -10,17 +16,15 @@ namespace ApiRestMovies.Controllers
     public class UserController : ControllerBase
     {
         private readonly IUserRepository _userRepository;
+        public IConfiguration _configuration;
 
-        public UserController(IUserRepository userRepository)
+        public UserController(IUserRepository userRepository,IConfiguration configuration)
         {
             _userRepository = userRepository;
+            _configuration = configuration;
         }
 
-        [HttpGet("{user}")]
-        public async Task<IActionResult> SignIn(User user)
-        {
-            return Ok(await _userRepository.SignIn(user));
-        }
+
 
         [HttpPost]
         public async Task<IActionResult> LogIn([FromBody]User user)
@@ -35,5 +39,51 @@ namespace ApiRestMovies.Controllers
 
             return Created("created", created);
         }
+
+        [HttpPost("SignIn")]
+        public async Task<dynamic> SignInAsync([FromBody] User user)
+        {
+            var usuario = await _userRepository.SignIn(user);
+            if (usuario == null)
+            {
+                return new
+                {
+                    success = false,
+                    message = "credenciales incorrectas",
+                    result = ""
+                };
+
+            }
+            var jwt = _configuration.GetSection("Jwt").Get<Jwt>();
+
+            var claims = new[]
+            {
+                new Claim(JwtRegisteredClaimNames.Sub, jwt.Subject),
+                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+                new Claim(JwtRegisteredClaimNames.Iat, DateTime.UtcNow.ToString()),
+                new Claim("name", usuario.Name),
+                new Claim("password",usuario.Password)
+            };
+
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwt.key));
+            var SingIn = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+
+            var token = new JwtSecurityToken(
+                jwt.Issuer,
+                jwt.Audiencie,
+                claims,
+                expires: DateTime.Now.AddMinutes(4),
+                signingCredentials: SingIn
+                );
+
+            return new
+            {
+                success = true,
+                message = "Exito",
+                result = new JwtSecurityTokenHandler().WriteToken(token)
+            };
+        }
+
+ 
     }
 }
