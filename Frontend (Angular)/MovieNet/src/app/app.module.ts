@@ -25,6 +25,9 @@ import { WelcomeComponent } from './pages/welcome/welcome.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { LoginComponent } from './pages/login/login.component';
 import { SigninComponent } from './pages/signin/signin.component';
+import { authInterceptorProviders } from './services/auth.interceptor';
+import { ProfileComponent } from './pages/profile/profile.component';
+import { MoviedetailsComponent } from './pages/moviedetails/moviedetails.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +38,8 @@ import { SigninComponent } from './pages/signin/signin.component';
     GalleryComponent,
     LoginComponent,
     SigninComponent,
+    ProfileComponent,
+    MoviedetailsComponent,
   ],
   imports: [
     MatListModule,
@@ -54,7 +59,7 @@ import { SigninComponent } from './pages/signin/signin.component';
     MatSlideToggleModule,
     MatSelectModule,
   ],
-  providers: [],
+  providers: [authInterceptorProviders],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

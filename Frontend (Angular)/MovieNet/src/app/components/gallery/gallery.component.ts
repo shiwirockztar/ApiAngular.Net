@@ -30,6 +30,19 @@ export class GalleryComponent {
       if (res) {
         this.listado = res.results;
         console.log(this.listado);
+
+        if (this.pagina < 1000) {
+          if (this.ultimaPelicula) {
+            //this.observador.unobserve(this.ultimaPelicula);
+          }
+
+          const peliculasEnPantalla = document.querySelectorAll(
+            '.contenedor .pelicula'
+          );
+          this.ultimaPelicula =
+            peliculasEnPantalla[peliculasEnPantalla.length - 1];
+          //this.observador.observe(this.ultimaPelicula);
+        }
       } else {
         console.log('Hubo un error y no sabemos que paso');
       }
@@ -54,5 +67,9 @@ export class GalleryComponent {
         threshold: 1.0,
       }
     );
+  }
+
+  link(movie: any): void {
+    this.router.navigate(['/detail/' + movie.id]);
   }
 }

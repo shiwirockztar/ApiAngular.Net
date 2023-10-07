@@ -1,17 +1,19 @@
 <div class="contenedor" id="contenedor">
-  <div *ngFor="let num of ListSearch; let indice = index" class="pelicula">
+  <div *ngFor="let movie of ListSearch; let indice = index" class="pelicula">
     <img
       class="poster"
-      src="https://image.tmdb.org/t/p/w500/{{ num.poster_path }}"
+      src="https://image.tmdb.org/t/p/w500/{{ movie.poster_path }}"
+      (click)="link(movie)"
     />
-    <h3 class="titulo">{{ num.title }}</h3>
+    <h3 class="titulo">{{ movie.title }}</h3>
   </div>
   <!-- [nombre]="findList" -->
-  <div *ngFor="let num of listado; let indice = index" class="pelicula">
+  <div *ngFor="let movie of listado; let indice = index" class="pelicula">
     <img
+      (click)="link(movie)"
       class="poster"
-      src="https://image.tmdb.org/t/p/w500/{{ num.poster_path }}"
+      src="https://image.tmdb.org/t/p/w500/{{ movie.poster_path }}"
     />
-    <h3 class="titulo">{{ num.title }}</h3>
+    <h3 class="titulo">{{ movie.title }}</h3>
   </div>
 </div>

@@ -80,6 +80,7 @@ namespace ApiRestMovies.Controllers
             {
                 success = true,
                 message = "Exito",
+                user= usuario.Name,
                 result = new JwtSecurityTokenHandler().WriteToken(token)
             };
         }

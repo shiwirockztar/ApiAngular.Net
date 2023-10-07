@@ -17,10 +17,40 @@
     </div>
     <!-- <span class="example-spacer"></span> -->
     <div class="content-right">
-      <a [routerLink]="'/login'" style="margin-right: 0px"> Registrar </a>
-      <a [routerLink]="'/Signin'" style="margin-right: 0px">Iniciar sesión </a>
-      <a style="margin-right: 0px" *ngIf="sign" (click)="logOut()">
+      <a
+        *ngIf="!login.isLoggedIn()"
+        [routerLink]="'/login'"
+        style="margin-right: 0px"
+      >
+        Registrar
+      </a>
+      <a
+        *ngIf="!login.isLoggedIn()"
+        [routerLink]="'/Signin'"
+        style="margin-right: 0px"
+        >Iniciar sesión
+      </a>
+
+      <a
+        *ngIf="login.isLoggedIn"
+        style="margin-right: 50px"
+        mat-icon-button
+        class="example-icon favorite-icon"
+        aria-label="Example icon-button with heart icon"
+        (click)="logout()"
+      >
         Cerrar sesión
+      </a>
+
+      <a
+        *ngIf="login.isLoggedIn()"
+        mat-button
+        style="margin-right: 10px"
+        class="example-icon favorite-icon"
+        routerLink="/admin"
+        aria-label="Example icon-button with heart icon"
+      >
+        {{ login.getUser() }}
       </a>
     </div>
   </div>

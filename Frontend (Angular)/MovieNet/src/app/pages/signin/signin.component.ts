@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
+import { LoginService } from 'src/app/services/login.service';
 import { NetServerService } from 'src/app/services/net-server.service';
 import Swal from 'sweetalert2';
 
@@ -21,6 +22,7 @@ export class SigninComponent {
   constructor(
     private router: Router,
     private snack: MatSnackBar,
+    private login: LoginService,
     private ans: NetServerService
   ) {}
 
@@ -47,7 +49,8 @@ export class SigninComponent {
     }
     this.ans.generateToken(this.signinData).subscribe(
       (answer: any) => {
-        const { success, message, result } = answer;
+        const { success, message, result, user } = answer;
+        console.log(answer);
         if (!success) {
           console.log(answer);
           const txt = `Datos inválidos , vuelva a intentar !! ${message}`;
@@ -56,9 +59,8 @@ export class SigninComponent {
           });
           return;
         }
-        const data = result;
-        console.log(data);
-        this.ans.signInUser(data);
+        this.login.loginUser(answer.result);
+        this.login.setUser(answer.user);
         Swal.fire('¡ Bienvenido !', 'Disfruta de las peliculas', 'success');
         this.router.navigate(['/']);
       },

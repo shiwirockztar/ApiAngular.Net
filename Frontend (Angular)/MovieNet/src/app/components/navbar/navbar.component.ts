@@ -5,6 +5,7 @@ import { debounceTime, map } from 'rxjs/operators';
 import { NetServerService } from 'src/app/services/net-server.service';
 import { Observable, Subject } from 'rxjs';
 import { Router } from '@angular/router';
+import { LoginService } from 'src/app/services/login.service';
 
 @Component({
   selector: 'app-navbar',
@@ -14,16 +15,26 @@ import { Router } from '@angular/router';
 export class NavbarComponent {
   @Output() enviar: EventEmitter<string> = new EventEmitter<string>();
   public findList: any;
-  public sign: boolean = false;
+  //public user: any;
+  //public signIn: boolean = false;
   control = new FormControl();
 
-  private miAtributoSubject = new Subject<string>();
-  findListB$ = this.miAtributoSubject.asObservable();
-
-  constructor(private answerNet: NetServerService, private router: Router) {}
+  constructor(
+    private answerNet: NetServerService,
+    public login: LoginService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.observerChangeSearch();
+    //this.user = this.login.getUser();
+    //this.login.loginStatusSubjec.asObservable().subscribe((data) => {
+    // this.signIn = this.login.isLoggedIn();
+    // console.log('usuario activo :', this.signIn);
+    // this.user = this.login.getUser().JSON();
+    // console.log('Nombre de usuario :', this.user);
+    // });
+    // console.log(this.user);
   }
 
   observerChangeSearch() {
@@ -60,7 +71,9 @@ export class NavbarComponent {
     }
   }
 
-  logOut() {
-    localStorage.removeItem('token');
+  public logout() {
+    this.login.logout();
+    window.location.reload();
+    // this.router.navigate(['']);
   }
 }
