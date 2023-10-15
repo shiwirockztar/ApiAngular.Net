@@ -10,11 +10,11 @@ export class NetServerService {
 
   // Obtenemos lista peliculas
   public cargarUltimasPelis(pagina: any) {
-    return this.http.get(`${baseNetUrl}/`);
+    return this.http.get(`${baseNetUrl}/api/movie/last/${pagina}`);
   }
   // Obtenemos lista peliculas populares
   public cargarPelisPop(pagina: any) {
-    return this.http.get(`${baseNetUrl}/api/Movie`);
+    return this.http.get(`${baseNetUrl}/api/Movie/populars/${pagina}`);
   }
   // Obtenemos lista peliculas buscadas por el nombre (keyword)
   public buscar(keyword: string) {

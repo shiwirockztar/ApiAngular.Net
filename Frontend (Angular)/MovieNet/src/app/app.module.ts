@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
 // Angular materials
 import { MatButtonModule } from '@angular/material/button';
@@ -42,6 +43,7 @@ import { MoviedetailsComponent } from './pages/moviedetails/moviedetails.compone
     MoviedetailsComponent,
   ],
   imports: [
+    InfiniteScrollModule,
     MatListModule,
     BrowserModule,
     AppRoutingModule,
