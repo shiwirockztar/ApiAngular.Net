@@ -16,9 +16,17 @@ export class NetServerService {
   public cargarPelisPop(pagina: any) {
     return this.http.get(`${baseNetUrl}/api/Movie`);
   }
-  // Obtenemos lista peliculas
+  // Obtenemos lista peliculas buscadas por el nombre (keyword)
   public buscar(keyword: string) {
     return this.http.get(`${baseNetUrl}/api/Movie/keyword/${keyword}`);
+  }
+  // Obtenemos pelicula por (id)
+  public buscarPorId(id: string) {
+    return this.http.get(`${baseNetUrl}/api/Movie/${id}`);
+  }
+  // Obtenemos lista peliculas del usuario (id)
+  public buscarDelUsuarioPorId(id: string) {
+    return this.http.get(`${baseNetUrl}/api/Movie/GetMovies/${id}`);
   }
 
   // Proceso de registro

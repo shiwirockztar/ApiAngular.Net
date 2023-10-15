@@ -51,6 +51,7 @@ export class SigninComponent {
       (answer: any) => {
         const { success, message, result, user } = answer;
         console.log(answer);
+        console.log(success);
         if (!success) {
           console.log(answer);
           const txt = `Datos inválidos , vuelva a intentar !! ${message}`;
@@ -65,6 +66,11 @@ export class SigninComponent {
         this.router.navigate(['/']);
       },
       (error) => {
+        const txt = `Datos inválidos , vuelva a intentar !!`;
+        this.snack.open(txt, 'Aceptar', {
+          duration: 3000,
+        });
+        return;
         console.error(error);
       }
     );

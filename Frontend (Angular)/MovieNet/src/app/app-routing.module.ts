@@ -9,9 +9,13 @@ import { userGuard } from './services/user.guard';
 import { MoviedetailsComponent } from './pages/moviedetails/moviedetails.component';
 
 const routes: Routes = [
-  { path: 'detail/:id', component: MoviedetailsComponent },
   {
     path: '',
+    component: HomeComponent,
+    // ],
+  },
+  {
+    path: 'home',
     component: HomeComponent,
     pathMatch: 'full',
     // children: [
@@ -20,6 +24,11 @@ const routes: Routes = [
     //     component:  ,
     //   },
     // ],
+  },
+  {
+    path: 'detail/:Id',
+    component: MoviedetailsComponent,
+    pathMatch: 'full',
   },
   {
     path: 'welcome',

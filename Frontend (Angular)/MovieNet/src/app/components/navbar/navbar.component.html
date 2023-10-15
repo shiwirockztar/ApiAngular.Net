@@ -31,25 +31,11 @@
         >Iniciar sesión
       </a>
 
-      <a
-        *ngIf="login.isLoggedIn"
-        style="margin-right: 50px"
-        mat-icon-button
-        class="example-icon favorite-icon"
-        aria-label="Example icon-button with heart icon"
-        (click)="logout()"
-      >
+      <a *ngIf="signIn" style="margin-right: 50px" (click)="logout()">
         Cerrar sesión
       </a>
 
-      <a
-        *ngIf="login.isLoggedIn()"
-        mat-button
-        style="margin-right: 10px"
-        class="example-icon favorite-icon"
-        routerLink="/admin"
-        aria-label="Example icon-button with heart icon"
-      >
+      <a *ngIf="signIn" style="margin-right: 10px" routerLink="/admin">
         {{ login.getUser() }}
       </a>
     </div>

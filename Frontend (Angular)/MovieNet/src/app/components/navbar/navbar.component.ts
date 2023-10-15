@@ -6,6 +6,7 @@ import { NetServerService } from 'src/app/services/net-server.service';
 import { Observable, Subject } from 'rxjs';
 import { Router } from '@angular/router';
 import { LoginService } from 'src/app/services/login.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-navbar',
@@ -15,19 +16,24 @@ import { LoginService } from 'src/app/services/login.service';
 export class NavbarComponent {
   @Output() enviar: EventEmitter<string> = new EventEmitter<string>();
   public findList: any;
-  //public user: any;
-  //public signIn: boolean = false;
+  public user: any;
+  public signIn: boolean = false;
   control = new FormControl();
 
   constructor(
     private answerNet: NetServerService,
     public login: LoginService,
-    private router: Router
+    private router: Router,
+    private snack: MatSnackBar
   ) {}
 
   ngOnInit(): void {
     this.observerChangeSearch();
-    //this.user = this.login.getUser();
+    //preguntamos si hay un usuario en localStorage
+    this.user = this.login.getUser();
+    if (this.user) {
+      this.signIn = true;
+    }
     //this.login.loginStatusSubjec.asObservable().subscribe((data) => {
     // this.signIn = this.login.isLoggedIn();
     // console.log('usuario activo :', this.signIn);
@@ -37,6 +43,7 @@ export class NavbarComponent {
     // console.log(this.user);
   }
 
+  // atento ala busqueda
   observerChangeSearch() {
     this.control.valueChanges.pipe(debounceTime(500)).subscribe((query) => {
       this.search(query);
@@ -73,7 +80,10 @@ export class NavbarComponent {
 
   public logout() {
     this.login.logout();
-    window.location.reload();
-    // this.router.navigate(['']);
+    this.router.navigate(['/home']);
+    // window.location.reload();
+    this.snack.open('Cierre exitoso !!', 'Aceptar', {
+      duration: 5000,
+    });
   }
 }

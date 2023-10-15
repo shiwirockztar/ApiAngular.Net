@@ -1,63 +1,69 @@
-<app-navbar></app-navbar>
-<div class="login-container">
-  <mat-card class="card">
-    <div class="container text-center">
-      <img src="../../../assets/iniciar-sesion2.png" width="100" height="100" />
-    </div>
-    <p class="text-center">Inicia sesión con tu cuenta</p>
-    <form (ngSubmit)="formSubmit()">
-      <mat-form-field class="full-width" appearance="outline">
-        <mat-label>Seudonimo</mat-label>
-
-        <input
-          [(ngModel)]="signinData.name"
-          name="username"
-          required
-          #nickname
-          matInput
-          placeholder="Digite su nombre de usuario"
-        />
-        <button
-          *ngIf="nickname.value.length > 0"
-          matSuffix
-          mat-icon-button
-          type="reset"
-          (click)="reset()"
-        >
-          <mat-icon>close</mat-icon>
-        </button>
-        <mat-hint>El nombre de usuario debe ser valido</mat-hint>
-      </mat-form-field>
-
-      <mat-form-field class="full-width" appearance="outline">
-        <mat-label><mat-icon>lock</mat-icon>Contraseña</mat-label>
-        <!--lock_open, done_outline,input,  https-->
-        <input
-          [(ngModel)]="signinData.password"
-          name="password"
-          required
-          type="password"
-          matInput
-          placeholder="Digite su contraseña"
-        />
-        <mat-hint>La contraseña debe ser valida</mat-hint>
-      </mat-form-field>
-
+<div class="fullContainer">
+  <app-navbar></app-navbar>
+  <div class="login-container">
+    <mat-card class="card">
       <div class="container text-center">
-        <button
-          class="btnLogin"
-          type="submit"
-          mat-raised-button
-          color="primary"
-        >
-          Login
-        </button>
+        <img
+          src="../../../assets/iniciar-sesion2.png"
+          width="100"
+          height="100"
+        />
       </div>
-    </form>
-    <br />
-    <div class="links">
-      <a (click)="linkLogIn()">Crear cuenta</a>
+      <p class="text-center">Inicia sesión con tu cuenta</p>
+      <form (ngSubmit)="formSubmit()">
+        <mat-form-field class="full-width" appearance="outline">
+          <mat-label>Seudonimo</mat-label>
+
+          <input
+            [(ngModel)]="signinData.name"
+            name="username"
+            required
+            #nickname
+            matInput
+            placeholder="Digite su nombre de usuario"
+          />
+          <button
+            *ngIf="nickname.value.length > 0"
+            matSuffix
+            mat-icon-button
+            type="reset"
+            (click)="reset()"
+          >
+            <mat-icon>close</mat-icon>
+          </button>
+          <mat-hint>El nombre de usuario debe ser valido</mat-hint>
+        </mat-form-field>
+
+        <mat-form-field class="full-width" appearance="outline">
+          <mat-label><mat-icon>lock</mat-icon>Contraseña</mat-label>
+          <!--lock_open, done_outline,input,  https-->
+          <input
+            [(ngModel)]="signinData.password"
+            name="password"
+            required
+            type="password"
+            matInput
+            placeholder="Digite su contraseña"
+          />
+          <mat-hint>La contraseña debe ser valida</mat-hint>
+        </mat-form-field>
+
+        <div class="container text-center">
+          <button
+            class="btnLogin"
+            type="submit"
+            mat-raised-button
+            color="primary"
+          >
+            Login
+          </button>
+        </div>
+      </form>
       <br />
-    </div>
-  </mat-card>
+      <div class="links">
+        <a (click)="linkLogIn()">Crear cuenta</a>
+        <br />
+      </div>
+    </mat-card>
+  </div>
 </div>

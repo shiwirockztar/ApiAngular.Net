@@ -1,16 +1,17 @@
 /*----------  login Styles  ----------*/
-.login-container {
-  width: 100vw;
+.fullContainer {
+  background: linear-gradient(to right, #021b79, #0575e6);
   height: 100vh;
+  height: auto;
+}
+.login-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #0575e6;
-  background: -webkit-linear-gradient(to right, #021b79, #0575e6);
-  background: linear-gradient(to right, #021b79, #0575e6);
 }
 mat-card {
-  width: 95%;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
   max-width: 320px;
   height: auto;
   border: 1px solid var(--border-color);

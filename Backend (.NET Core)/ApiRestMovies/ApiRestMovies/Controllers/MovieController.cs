@@ -41,8 +41,9 @@ namespace ApiRestMovies.Controllers
         public async Task<IActionResult> GetMovieById(int id)
         {
             var httpClient = new HttpClient();
+            var urlMx = $"https://api.themoviedb.org/3/movie/{id}?api_key=192e0b9821564f26f52949758ea3c473&language=es-MX";
             var url = $"https://api.themoviedb.org/3/movie/{id}?api_key=192e0b9821564f26f52949758ea3c473";
-            var response = await httpClient.GetAsync(url);
+            var response = await httpClient.GetAsync(urlMx);
             return Ok(await response.Content.ReadAsStringAsync());
         }
 

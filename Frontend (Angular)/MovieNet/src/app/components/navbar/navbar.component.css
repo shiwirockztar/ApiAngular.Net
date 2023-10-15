@@ -15,10 +15,15 @@
 }
 .content-right {
   display: flex;
-  width: 35vw;
+  width: 30vw;
   justify-content: space-evenly;
+  align-items: center;
 }
 a {
   text-decoration: none;
   color: #fff;
+}
+
+.mat-toolbar.mat-primary {
+  font-size: 18px;
 }
