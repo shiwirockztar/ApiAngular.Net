@@ -1,0 +1,28 @@
+<mat-card class="sidebar">
+  <mat-action-list>
+    <div mat-subheader>Menu</div>
+    <mat-divider></mat-divider>
+    <mat-list-item mat-list-item routerLink="/home">
+      <div class="center"><mat-icon mat-list-icon>home</mat-icon>Inicio</div>
+    </mat-list-item>
+    <button mat-list-item routerLink="/admin/profile">
+      <div class="center">
+        <mat-icon mat-list-icon>account_circle</mat-icon> Perfil
+      </div>
+    </button>
+    <button mat-list-item routerLink="/whisList">
+      <div class="center">
+        <mat-icon mat-list-icon>list</mat-icon>Mis peliculas
+      </div>
+    </button>
+    <button mat-list-item routerLink="/profile/gallery">
+      <div class="center"><mat-icon>add_circle</mat-icon>Agregar pelicula</div>
+    </button>
+    <button mat-list-item routerLink="/admin/">
+      <div class="center"><mat-icon mat-list-icon></mat-icon></div>
+    </button>
+    <button mat-list-item (click)="logout()">
+      <mat-icon mat-list-icon>logout</mat-icon>Salir
+    </button>
+  </mat-action-list>
+</mat-card>

@@ -1,0 +1,7 @@
+.center {
+  display: flex;
+  gap: 9px;
+}
+.sidebar {
+  min-width: 19vw;
+}

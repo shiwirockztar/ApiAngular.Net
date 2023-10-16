@@ -7,6 +7,7 @@ import { SigninComponent } from './pages/signin/signin.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { userGuard } from './services/user.guard';
 import { MoviedetailsComponent } from './pages/moviedetails/moviedetails.component';
+import { GalleryComponent } from './components/gallery/gallery.component';
 
 const routes: Routes = [
   {
@@ -48,8 +49,13 @@ const routes: Routes = [
   {
     path: 'profile',
     component: ProfileComponent,
-    pathMatch: 'full',
-    canActivate: [userGuard],
+    // pathMatch: 'full',
+    children: [
+      {
+        path: 'gallery',
+        component: GalleryComponent,
+      },
+    ],
   },
 ];
 
@@ -58,3 +64,4 @@ const routes: Routes = [
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
+// canActivate: [userGuard],

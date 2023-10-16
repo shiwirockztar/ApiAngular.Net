@@ -29,6 +29,7 @@ import { SigninComponent } from './pages/signin/signin.component';
 import { authInterceptorProviders } from './services/auth.interceptor';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { MoviedetailsComponent } from './pages/moviedetails/moviedetails.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { MoviedetailsComponent } from './pages/moviedetails/moviedetails.compone
     SigninComponent,
     ProfileComponent,
     MoviedetailsComponent,
+    SidebarComponent,
   ],
   imports: [
     InfiniteScrollModule,
