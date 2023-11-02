@@ -9,3 +9,4 @@ C:\Users\SHIIWITOCKZRAT\Documents\ApiAngular.Net\Backend (.NET Core)\ApiRestMovi
 C:\Users\SHIIWITOCKZRAT\Documents\ApiAngular.Net\Backend (.NET Core)\ApiRestMovies\ApiRestMovies.Model\obj\Debug\net6.0\refint\ApiRestMovies.Model.dll
 C:\Users\SHIIWITOCKZRAT\Documents\ApiAngular.Net\Backend (.NET Core)\ApiRestMovies\ApiRestMovies.Model\obj\Debug\net6.0\ApiRestMovies.Model.pdb
 C:\Users\SHIIWITOCKZRAT\Documents\ApiAngular.Net\Backend (.NET Core)\ApiRestMovies\ApiRestMovies.Model\obj\Debug\net6.0\ref\ApiRestMovies.Model.dll
+C:\Users\SHIIWITOCKZRAT\Documents\ApiAngular.Net\Backend (.NET Core)\ApiRestMovies\ApiRestMovies.Model\obj\Debug\net6.0\ApiRestMovies.Model.csproj.AssemblyReference.cache

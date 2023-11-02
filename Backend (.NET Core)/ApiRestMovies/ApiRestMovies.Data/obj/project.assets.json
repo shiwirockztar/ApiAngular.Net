@@ -559,6 +559,9 @@
       "ApiRestMovies.Model/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "MySql.Data": "8.1.0"
+        },
         "compile": {
           "bin/placeholder/ApiRestMovies.Model.dll": {}
         },

@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.ConstrainedExecution;
+using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -80,7 +81,6 @@ namespace ApiRestMovies.Data.Repositories
             }
             
         }
-
        
         public async Task<User> GetUserById(int id)
         {
@@ -88,7 +88,53 @@ namespace ApiRestMovies.Data.Repositories
             var sql = @" SELECT name, email, password 
                         FROM user 
                         WHERE IdUser = @IdUser";
+            
             return await db.QueryFirstOrDefaultAsync<User>(sql, new { IdUser = id });
-        } 
+        }
+
+
+        public async Task<dynamic> validationToken(ClaimsIdentity identity)
+        {
+            try
+            {
+                if (identity.Claims.Count() == 0)
+                {
+                    return new
+                    {
+                        success = false,
+                        message = "Verificar si esta enviando un token valido",
+                        result = ""
+                    };
+                }
+
+                var id = identity.Claims.FirstOrDefault(x => x.Type == "id").Value;
+                Console.WriteLine("id ", id);
+
+                //var db = MySqlConnection(_connectionString.ConnectionString);
+                var db = dbConnection();
+                var sql = @" SELECT name, email, password 
+                        FROM user 
+                        WHERE IdUser = @IdUser";
+                User usuario = await db.QueryFirstOrDefaultAsync<User>(sql, new { IdUser = id });
+                Console.WriteLine("usuario ", usuario);
+                //User usuario = _userRepository.GetUserById(int.Parse(id)); 
+
+                return new
+                {
+                    success = true,
+                    message = "Exito",
+                    result = usuario
+                };
+            }
+            catch (Exception ex)
+            {
+                return (dynamic)new
+                {
+                    success = false,
+                    message = "Catch: " + ex.Message,
+                    result = ""
+                };
+            }
+        }
     }
 }
