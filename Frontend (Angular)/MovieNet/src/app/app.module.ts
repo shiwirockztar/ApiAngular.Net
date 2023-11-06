@@ -30,6 +30,7 @@ import { authInterceptorProviders } from './services/auth.interceptor';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { MoviedetailsComponent } from './pages/moviedetails/moviedetails.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { NhomeComponent } from './pages/nhome/nhome.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
     ProfileComponent,
     MoviedetailsComponent,
     SidebarComponent,
+    NhomeComponent,
   ],
   imports: [
     InfiniteScrollModule,

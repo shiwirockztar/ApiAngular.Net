@@ -8,6 +8,7 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import { userGuard } from './services/user.guard';
 import { MoviedetailsComponent } from './pages/moviedetails/moviedetails.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
+import { NhomeComponent } from './pages/nhome/nhome.component';
 
 const routes: Routes = [
   {
@@ -56,6 +57,11 @@ const routes: Routes = [
         component: GalleryComponent,
       },
     ],
+  },
+  {
+    path: 'nHome',
+    component: NhomeComponent,
+    pathMatch: 'full',
   },
 ];
 
