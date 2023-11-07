@@ -14,4 +14,11 @@ export class ApiThemoviedbService {
       `${ApiMovieDbUrl}api_key=${api_key}&language=${language}&page=${pagina}`
     );
   }
+
+  // Obtenemos lista peliculas
+  public getGenres() {
+    return this.http.get(
+      `https://api.themoviedb.org/3/genre/movie/list?api_key=${api_key}`
+    );
+  }
 }

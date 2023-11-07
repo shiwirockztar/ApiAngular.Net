@@ -8,12 +8,12 @@
     />
   </a>
   <!--  
-        se setea la clase "search-box active" para mostrar los elementos de buqueda 
-      -->
-  <div class="search-box" search-box>
+    se setea la clase "search-box active" para mostrar los elementos de buqueda    
+  -->
+  <div [ngClass]="this.active ? 'search-box active' : 'search-box'" search-box>
     <!--  
-            se setea la clase "search-wrapper searching" para activar en la busqueda la barra carga 
-        -->
+        se setea la clase "search-wrapper searching" para activar en la busqueda la barra carga 
+    -->
     <div class="search-wrapper" search-wrapper>
       <input
         type="text"
@@ -32,7 +32,7 @@
         alt="search"
       />
     </div>
-    <button class="search-btn" search-toggler>
+    <button class="search-btn" search-toggler (click)="toggle()">
       <img
         src="../../../assets/assets/images/close.png"
         alt="close search box"
@@ -42,7 +42,7 @@
     </button>
   </div>
 
-  <div class="search-btn" search-toggler menu-close>
+  <div class="search-btn" search-toggler menu-close (click)="toggle()">
     <img
       src="../../../assets/assets/images/search.png"
       alt="open search box"
@@ -51,7 +51,12 @@
     />
   </div>
 
-  <button class="menu-btn" menu-btn menu-toggler>
+  <button
+    [ngClass]="menuAbierto ? 'menu-btn active' : 'menu-btn'"
+    menu-btn
+    (click)="activ()"
+    menu-toggler
+  >
     <img
       src="../../../assets/assets/images/menu.png"
       alt="open menu"

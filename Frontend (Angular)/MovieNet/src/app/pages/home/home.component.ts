@@ -9,6 +9,7 @@ import { NetServerService } from 'src/app/services/net-server.service';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {
+  @Input() ListSearch: any;
   public homeMemory: any;
 
   //Atrapamos en home para enviar a galeria

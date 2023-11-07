@@ -19,6 +19,23 @@
   z-index: 1;
 }
 
+.overlay {
+  position: fixed;
+  top: 96px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: var(--background);
+  opacity: 0;
+  pointer-events: none;
+  transition: var(--transition-short);
+  z-index: 3;
+}
+.overlay.active {
+  opacity: 0.5;
+  pointer-events: all;
+}
+
 /* .container::after,
   .serch-modal::after {
     content: "";

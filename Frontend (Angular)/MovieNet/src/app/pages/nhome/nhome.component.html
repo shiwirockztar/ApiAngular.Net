@@ -2,15 +2,19 @@
   <!---------------- 
     HEADER 
   ------------------>
-  <app-header></app-header>
+  <app-header (toggleMenu)="activated()"></app-header>
 
   <!---------------- 
         SIDEBAR  
     ------------------>
-  <app-home-sidebar></app-home-sidebar>
+  <app-home-sidebar [state]="openMenu"></app-home-sidebar>
 
   <!-- se setea la clase "overlay active" para mostrar marco de la sidebar -->
-  <div class="overlay" overlay menu-toogler></div>
+  <div
+    [ngClass]="openMenu ? 'overlay active' : 'overlay'"
+    overlay
+    menu-toogler
+  ></div>
 
   <article class="container" page-content>
     <!-- Banner -->
