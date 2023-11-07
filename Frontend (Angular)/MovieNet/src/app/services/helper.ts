@@ -1,4 +1,6 @@
-export let baseNetUrl = 'https://localhost:7275';
+// export let baseNetUrl = 'https://localhost:7275';
+// Nueva direccion del ejecutable
+export let baseNetUrl = 'https://localhost:5001';
 export let api_key = '192e0b9821564f26f52949758ea3c473';
 export let language = 'language=es-MX';
 // Popular
