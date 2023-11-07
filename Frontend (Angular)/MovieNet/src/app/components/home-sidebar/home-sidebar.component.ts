@@ -1,4 +1,7 @@
 import { Component, Input } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
+import { ApiThemoviedbService } from 'src/app/services/api-themoviedb.service';
 
 @Component({
   selector: 'app-home-sidebar',
@@ -7,10 +10,31 @@ import { Component, Input } from '@angular/core';
 })
 export class HomeSidebarComponent {
   @Input() state: any;
-  public on: boolean = false;
+  public genreList: any = {};
+  // public genreList: any = []; como arreglo se iteran muchos expacios vacios en html
+
+  constructor(
+    private apiTMDB: ApiThemoviedbService,
+    private router: Router,
+    private snack: MatSnackBar
+  ) {}
 
   ngOnInit(): void {
-    this.on = this.state;
-    console.log(' homSidebar: ', this.state);
+    this.apiTMDB.getGenres().subscribe(
+      (data: any) => {
+        for (const { id, name } of data.genres) {
+          this.genreList[id] = name;
+        }
+        console.log(this.genreList);
+      },
+      (error) => {
+        // return;
+        // console.error(error);
+      }
+    );
+  }
+
+  getObjectKeys(objeto: any) {
+    return Object.keys(objeto);
   }
 }
