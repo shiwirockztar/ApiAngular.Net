@@ -18,13 +18,7 @@
 
 ## 🔖 Description
 
-The candidate must develop a web application that allows users to search for movies
-and save them to their profile. The application should be based on Angular for the frontend and .NET
-Core 6.0 for the backend. In addition, it should use a public movie API to fetch data from movies.
-movie data. An authentication system and a database must be implemented to store user information and saved movies.
-store user information and the movies saved by each user.
-Recommended movie API, not mandatory: Getting Started (themoviedb.org)
-(https://developer.themoviedb.org/reference/intro/getting-started)
+executable of an api for windows, which allows us to run the application without using visual studio code 2022
 
 ## ✅ Prerequisites
 
@@ -36,14 +30,19 @@ In order to work with this project, your local environment must have at least th
 
 inside the BackendEXE folder you will find a file with the name "ApiRestMovies", when you double click on it the application will start automatically.
 
+### Run
+
+To run ApiRestMovies.exe, a window will appear showing the status and the path where the server is running.
+
+<img src="./assets/run.PNG"/>
+
 ## 📂 Code scaffolding
 
 ```any
 /
 ├── assets 🌈               # Images Sources.
-├── ApiRestMovies 📦        # Main App-Exe with Server.
+├── ApiRestMovies.exe 📦    # Main App-Exe Server.
 ├── Readme                  # project description file.
-|   └── ...
 └── ...
 ```
 

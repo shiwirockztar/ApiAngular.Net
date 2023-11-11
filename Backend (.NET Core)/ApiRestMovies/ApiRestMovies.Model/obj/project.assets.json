@@ -1790,11 +1790,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\SHIIWITOCKZRAT\\Documents\\ApiAngular.Net\\Backend (.NET Core)\\ApiRestMovies\\ApiRestMovies.Model\\ApiRestMovies.Model.csproj",
+      "projectUniqueName": "C:\\Users\\SHIIWITOCKZRAT\\Documents\\Respawn\\ApiAngular.Net\\Backend (.NET Core)\\ApiRestMovies\\ApiRestMovies.Model\\ApiRestMovies.Model.csproj",
       "projectName": "ApiRestMovies.Model",
-      "projectPath": "C:\\Users\\SHIIWITOCKZRAT\\Documents\\ApiAngular.Net\\Backend (.NET Core)\\ApiRestMovies\\ApiRestMovies.Model\\ApiRestMovies.Model.csproj",
+      "projectPath": "C:\\Users\\SHIIWITOCKZRAT\\Documents\\Respawn\\ApiAngular.Net\\Backend (.NET Core)\\ApiRestMovies\\ApiRestMovies.Model\\ApiRestMovies.Model.csproj",
       "packagesPath": "C:\\Users\\SHIIWITOCKZRAT\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\SHIIWITOCKZRAT\\Documents\\ApiAngular.Net\\Backend (.NET Core)\\ApiRestMovies\\ApiRestMovies.Model\\obj\\",
+      "outputPath": "C:\\Users\\SHIIWITOCKZRAT\\Documents\\Respawn\\ApiAngular.Net\\Backend (.NET Core)\\ApiRestMovies\\ApiRestMovies.Model\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\SHIIWITOCKZRAT\\AppData\\Roaming\\NuGet\\NuGet.Config",
