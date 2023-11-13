@@ -25,7 +25,7 @@ export class HomeSidebarComponent {
         for (const { id, name } of data.genres) {
           this.genreList[id] = name;
         }
-        console.log(this.genreList);
+        // console.log(this.genreList);
       },
       (error) => {
         // return;
@@ -35,6 +35,8 @@ export class HomeSidebarComponent {
   }
 
   getObjectKeys(objeto: any) {
+    // console.log(objeto);
+    // console.log(Object.keys(objeto));
     return Object.keys(objeto);
   }
 }

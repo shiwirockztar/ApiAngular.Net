@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "HkZVNmimRKPWy2Q4lsvbaiN4P79OWhxNtpsZN7608mQ=",
+  "Source": "ApiRestMovies",
+  "BasePath": "_content/ApiRestMovies",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

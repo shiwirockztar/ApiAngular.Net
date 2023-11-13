@@ -12,12 +12,12 @@ import { NhomeComponent } from './pages/nhome/nhome.component';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'oHome',
     component: HomeComponent,
     // ],
   },
   {
-    path: 'home',
+    path: 'ohome',
     component: HomeComponent,
     pathMatch: 'full',
     // children: [
@@ -59,7 +59,7 @@ const routes: Routes = [
     ],
   },
   {
-    path: 'nHome',
+    path: '',
     component: NhomeComponent,
     pathMatch: 'full',
   },

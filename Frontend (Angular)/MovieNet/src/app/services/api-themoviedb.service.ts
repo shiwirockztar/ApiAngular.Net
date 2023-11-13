@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { ApiMovieDbUrl, api_key, language } from './helper';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -16,9 +17,16 @@ export class ApiThemoviedbService {
   }
 
   // Obtenemos lista peliculas
-  public getGenres() {
-    return this.http.get(
+  public getGenres(): Observable<any> {
+    return this.http.get<any>(
       `https://api.themoviedb.org/3/genre/movie/list?api_key=${api_key}`
+    );
+  }
+
+  // Obtenemos lista peliculas
+  public getBanner() {
+    return this.http.get(
+      `https://api.themoviedb.org/3/movie/popular?api_key=${api_key}&page=1`
     );
   }
 }

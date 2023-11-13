@@ -1,0 +1,15 @@
+C:\Users\SHIIWITOCKZRAT\Documents\ApiAngular.Net\Backend (.NET Core)\ApiRestMovies\ApiRestMovies.Data\bin\Release\net6.0\ApiRestMovies.Data.deps.json
+C:\Users\SHIIWITOCKZRAT\Documents\ApiAngular.Net\Backend (.NET Core)\ApiRestMovies\ApiRestMovies.Data\bin\Release\net6.0\ApiRestMovies.Data.dll
+C:\Users\SHIIWITOCKZRAT\Documents\ApiAngular.Net\Backend (.NET Core)\ApiRestMovies\ApiRestMovies.Data\bin\Release\net6.0\ApiRestMovies.Data.pdb
+C:\Users\SHIIWITOCKZRAT\Documents\ApiAngular.Net\Backend (.NET Core)\ApiRestMovies\ApiRestMovies.Data\bin\Release\net6.0\ApiRestMovies.Model.dll
+C:\Users\SHIIWITOCKZRAT\Documents\ApiAngular.Net\Backend (.NET Core)\ApiRestMovies\ApiRestMovies.Data\bin\Release\net6.0\ApiRestMovies.Model.pdb
+C:\Users\SHIIWITOCKZRAT\Documents\ApiAngular.Net\Backend (.NET Core)\ApiRestMovies\ApiRestMovies.Data\obj\Release\net6.0\ApiRestMovies.Data.csproj.AssemblyReference.cache
+C:\Users\SHIIWITOCKZRAT\Documents\ApiAngular.Net\Backend (.NET Core)\ApiRestMovies\ApiRestMovies.Data\obj\Release\net6.0\ApiRestMovies.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\SHIIWITOCKZRAT\Documents\ApiAngular.Net\Backend (.NET Core)\ApiRestMovies\ApiRestMovies.Data\obj\Release\net6.0\ApiRestMovies.Data.AssemblyInfoInputs.cache
+C:\Users\SHIIWITOCKZRAT\Documents\ApiAngular.Net\Backend (.NET Core)\ApiRestMovies\ApiRestMovies.Data\obj\Release\net6.0\ApiRestMovies.Data.AssemblyInfo.cs
+C:\Users\SHIIWITOCKZRAT\Documents\ApiAngular.Net\Backend (.NET Core)\ApiRestMovies\ApiRestMovies.Data\obj\Release\net6.0\ApiRestMovies.Data.csproj.CoreCompileInputs.cache
+C:\Users\SHIIWITOCKZRAT\Documents\ApiAngular.Net\Backend (.NET Core)\ApiRestMovies\ApiRestMovies.Data\obj\Release\net6.0\ApiRestMovies.Data.csproj.CopyComplete
+C:\Users\SHIIWITOCKZRAT\Documents\ApiAngular.Net\Backend (.NET Core)\ApiRestMovies\ApiRestMovies.Data\obj\Release\net6.0\ApiRestMovies.Data.dll
+C:\Users\SHIIWITOCKZRAT\Documents\ApiAngular.Net\Backend (.NET Core)\ApiRestMovies\ApiRestMovies.Data\obj\Release\net6.0\refint\ApiRestMovies.Data.dll
+C:\Users\SHIIWITOCKZRAT\Documents\ApiAngular.Net\Backend (.NET Core)\ApiRestMovies\ApiRestMovies.Data\obj\Release\net6.0\ApiRestMovies.Data.pdb
+C:\Users\SHIIWITOCKZRAT\Documents\ApiAngular.Net\Backend (.NET Core)\ApiRestMovies\ApiRestMovies.Data\obj\Release\net6.0\ref\ApiRestMovies.Data.dll

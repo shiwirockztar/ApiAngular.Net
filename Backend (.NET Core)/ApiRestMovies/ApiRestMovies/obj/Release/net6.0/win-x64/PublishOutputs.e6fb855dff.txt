@@ -1,0 +1,11 @@
+C:\Users\SHIIWITOCKZRAT\Documents\ApiAngular.Net\Backend (.NET Core)\ApiRestMovies\ApiRestMovies\obj\Release\net6.0\win-x64\PubTmp\Out\appsettings.Development.json
+C:\Users\SHIIWITOCKZRAT\Documents\ApiAngular.Net\Backend (.NET Core)\ApiRestMovies\ApiRestMovies\obj\Release\net6.0\win-x64\PubTmp\Out\appsettings.json
+C:\Users\SHIIWITOCKZRAT\Documents\ApiAngular.Net\Backend (.NET Core)\ApiRestMovies\ApiRestMovies\obj\Release\net6.0\win-x64\PubTmp\Out\ApiRestMovies.pdb
+C:\Users\SHIIWITOCKZRAT\Documents\ApiAngular.Net\Backend (.NET Core)\ApiRestMovies\ApiRestMovies\obj\Release\net6.0\win-x64\PubTmp\Out\comerr64.dll
+C:\Users\SHIIWITOCKZRAT\Documents\ApiAngular.Net\Backend (.NET Core)\ApiRestMovies\ApiRestMovies\obj\Release\net6.0\win-x64\PubTmp\Out\gssapi64.dll
+C:\Users\SHIIWITOCKZRAT\Documents\ApiAngular.Net\Backend (.NET Core)\ApiRestMovies\ApiRestMovies\obj\Release\net6.0\win-x64\PubTmp\Out\k5sprt64.dll
+C:\Users\SHIIWITOCKZRAT\Documents\ApiAngular.Net\Backend (.NET Core)\ApiRestMovies\ApiRestMovies\obj\Release\net6.0\win-x64\PubTmp\Out\krb5_64.dll
+C:\Users\SHIIWITOCKZRAT\Documents\ApiAngular.Net\Backend (.NET Core)\ApiRestMovies\ApiRestMovies\obj\Release\net6.0\win-x64\PubTmp\Out\krbcc64.dll
+C:\Users\SHIIWITOCKZRAT\Documents\ApiAngular.Net\Backend (.NET Core)\ApiRestMovies\ApiRestMovies\obj\Release\net6.0\win-x64\PubTmp\Out\ApiRestMovies.Data.pdb
+C:\Users\SHIIWITOCKZRAT\Documents\ApiAngular.Net\Backend (.NET Core)\ApiRestMovies\ApiRestMovies\obj\Release\net6.0\win-x64\PubTmp\Out\ApiRestMovies.Model.pdb
+C:\Users\SHIIWITOCKZRAT\Documents\ApiAngular.Net\Backend (.NET Core)\ApiRestMovies\ApiRestMovies\obj\Release\net6.0\win-x64\PubTmp\Out\ApiRestMovies.exe

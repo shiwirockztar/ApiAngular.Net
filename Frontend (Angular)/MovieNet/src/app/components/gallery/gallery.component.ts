@@ -46,8 +46,8 @@ export class GalleryComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.answerPage.cargarUltimasPelis(this.pagina).subscribe((res: any) => {
-      // this.answerNet.cargarPelisPop(this.pagina).subscribe((res: any) => {
+    // this.answerPage.cargarUltimasPelis(this.pagina).subscribe((res: any) => {
+    this.answerNet.cargarPelisPop(this.pagina).subscribe((res: any) => {
       // this.answerNet.cargarUltimasPelis(this.pagina).subscribe((res: any) => {
       if (res) {
         this.listado = res.results;
