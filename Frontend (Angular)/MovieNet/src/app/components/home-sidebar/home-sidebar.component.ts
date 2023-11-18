@@ -34,7 +34,7 @@ export class HomeSidebarComponent {
     );
   }
 
-  getObjectKeys(objeto: any) {
+  getObjectKeys(objeto: any): any[] {
     // console.log(objeto);
     // console.log(Object.keys(objeto));
     return Object.keys(objeto);

@@ -29,4 +29,11 @@ export class ApiThemoviedbService {
       `https://api.themoviedb.org/3/movie/popular?api_key=${api_key}&page=1`
     );
   }
+
+  // Obtenemos lista peliculas
+  public getMovieList(path: any) {
+    return this.http.get(
+      `https://api.themoviedb.org/3${path}?api_key=${api_key}&page=1`
+    );
+  }
 }

@@ -27,11 +27,7 @@ export class BannerComponent implements OnInit, AfterViewInit {
   public movieList: any = {};
   public imageUrl: any = imageBaseUrl;
 
-  constructor(
-    private apiTMDB: ApiThemoviedbService,
-    private router: Router,
-    private snack: MatSnackBar
-  ) {}
+  constructor(private apiTMDB: ApiThemoviedbService) {}
 
   ngOnInit(): void {
     // Renderizar Banner por consumo de api
