@@ -383,6 +383,7 @@ body {
 
 .video-card {
   background-image: url("assets/assets/images/video-bg-icon.png");
+  aspect-ratio: 16 / 9;
   flex-shrink: 0;
   min-width: 400px; /* max-width: 500px; */
   width: calc(100%-40px);

@@ -12,6 +12,7 @@
       <div
         *ngFor="let movie of homePageSections[indice].movies; let indi = index"
         class="movie-card"
+        (click)="link(movie)"
       >
         <figure class="poster-box card-banner">
           <img
@@ -32,7 +33,12 @@
           </div>
           <div class="card-bage">{{ movie.release_date.split("-")[0] }}</div>
         </div>
-        <a href="detail.html" class="card-btn" title="{{ movie.title }}"></a>
+        <a
+          [routerLink]="'/details'"
+          href="details.html"
+          class="card-btn"
+          title="{{ movie.title }}"
+        ></a>
       </div>
     </div>
   </div>

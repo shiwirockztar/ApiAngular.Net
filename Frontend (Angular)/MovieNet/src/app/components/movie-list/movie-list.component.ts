@@ -73,6 +73,10 @@ export class MovieListComponent implements OnInit {
     return Promise.all(promises);
   }
 
+  link(movie: any): void {
+    this.router.navigate(['/details/' + movie.id]);
+  }
+
   /**
    * Creamos las cardas de peliculas de las secciones (problema no sube el coontador y se quedara en 0)
    */

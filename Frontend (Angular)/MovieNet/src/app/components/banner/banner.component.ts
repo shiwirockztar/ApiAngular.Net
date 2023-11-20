@@ -37,9 +37,11 @@ export class BannerComponent implements OnInit, AfterViewInit {
     });
   }
 
-  ngAfterViewInit() {
+  async ngAfterViewInit() {
     this.addHeroSlide();
-    // this.aString([28, 53, 1000]);
+    let x: Promise<any> = await this.aString([28, 53, 1000]);
+    console.log(x);
+    this.getMe([28, 53, 1000]);
   }
 
   getGenreFromList(genreIdList: any) {
@@ -85,22 +87,54 @@ export class BannerComponent implements OnInit, AfterViewInit {
     // return numero;
   }
 
-  aString(genreIdList: any) {
-    let newGenreList: any = [];
-    let listMovies: any = {};
+  async aString(genreIdList: any): Promise<any> {
+    try {
+      const data: any = await this.apiTMDB.getGenres().toPromise();
 
-    this.apiTMDB.getGenres().subscribe((data: any) => {
-      for (const { id, name } of data.genres) {
-        listMovies[id] = name;
-      }
-      for (const genreId of genreIdList) {
-        if (listMovies[genreId]) {
-          newGenreList.push(this.list[genreId]);
-        } else console.log('no existe');
-      }
-      return newGenreList.join(', ');
-    });
+      const newGenreList = data.genres
+        .filter((genre: any) => genreIdList.includes(genre.id))
+        .map((genre: any) => genre.name);
+
+      console.log('newGenreList ', newGenreList);
+      return newGenreList;
+    } catch (error) {
+      console.error('Error fetching genres:', error);
+      throw error;
+    }
+
+    // return new Promise((resolve, reject) => {
+    //   let newGenreList: any = [];
+    //   this.apiTMDB.getGenres().subscribe(
+    //     (data: any) => {
+    //       for (const { id, name } of data.genres) {
+    //         for (const genreId of genreIdList) {
+    //           if (genreId == id) {
+    //             newGenreList.push(name);
+    //           }
+    //         }
+    //       }
+    //       console.log('newGenreList ', newGenreList);
+    //       resolve(newGenreList);
+    //     },
+    //     (error) => {
+    //       // Rechaza la promesa con el error
+    //       reject(error);
+    //     }
+    //   );
+    // });
   }
+
+  async getMe(genreIdLis: any) {
+    try {
+      const genreIdList = genreIdLis;
+      const result = await this.aString(genreIdList);
+      console.log('Result:', result);
+      return result.join(', ');
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  }
+
   // Lista colocada mientras fixeamos El hecho de que la lista de genero sea un objeto vacío
   // podría deberse a que el ciclo de vida de Angular no ha tenido tiempo suficiente para procesar y recoger
   // los elementos de la vista. En situaciones asíncronas, podría ocurrir que intentes acceder a los elementos
@@ -126,4 +160,27 @@ export class BannerComponent implements OnInit, AfterViewInit {
     '10752': 'War',
     '10770': 'TV Movie',
   };
+
+  OaString(genreIdList: any): Promise<any> {
+    return new Promise((resolve, reject) => {
+      let newGenreList: any = [];
+      this.apiTMDB.getGenres().subscribe(
+        (data: any) => {
+          for (const { id, name } of data.genres) {
+            for (const genreId of genreIdList) {
+              if (genreId == id) {
+                newGenreList.push(name);
+              }
+            }
+          }
+          console.log('newGenreList ', newGenreList);
+          resolve(newGenreList);
+        },
+        (error) => {
+          // Rechaza la promesa con el error
+          reject(error);
+        }
+      );
+    });
+  }
 }

@@ -35,6 +35,7 @@ import { HomeSidebarComponent } from './components/home-sidebar/home-sidebar.com
 import { BannerComponent } from './components/banner/banner.component';
 import { HeaderComponent } from './components/header/header.component';
 import { MovieListComponent } from './components/movie-list/movie-list.component';
+import { DetailComponent } from './pages/detail/detail.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +54,7 @@ import { MovieListComponent } from './components/movie-list/movie-list.component
     BannerComponent,
     HeaderComponent,
     MovieListComponent,
+    DetailComponent,
   ],
   imports: [
     InfiniteScrollModule,

@@ -9,8 +9,20 @@ import { userGuard } from './services/user.guard';
 import { MoviedetailsComponent } from './pages/moviedetails/moviedetails.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { NhomeComponent } from './pages/nhome/nhome.component';
+import { DetailComponent } from './pages/detail/detail.component';
 
 const routes: Routes = [
+  {
+    path: '',
+    component: NhomeComponent,
+    pathMatch: 'full',
+  },
+  {
+    path: ' ',
+    component: NhomeComponent,
+    pathMatch: 'full',
+  },
+
   {
     path: 'oHome',
     component: HomeComponent,
@@ -31,6 +43,11 @@ const routes: Routes = [
     path: 'detail/:Id',
     component: MoviedetailsComponent,
     pathMatch: 'full',
+  },
+  {
+    path: 'details/:Id',
+    component: DetailComponent,
+    // pathMatch: 'full',
   },
   {
     path: 'welcome',
@@ -57,11 +74,6 @@ const routes: Routes = [
         component: GalleryComponent,
       },
     ],
-  },
-  {
-    path: '',
-    component: NhomeComponent,
-    pathMatch: 'full',
   },
 ];
 

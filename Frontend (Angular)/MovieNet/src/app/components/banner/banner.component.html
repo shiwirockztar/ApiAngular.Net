@@ -21,6 +21,7 @@
             {{ movie.vote_average.toFixed(1) }}
           </div>
         </div>
+        <!-- <p class="genre">{{ getMe(movie.genre_ids) }}</p> -->
         <p class="genre">{{ getGenreFromList(movie.genre_ids) }}</p>
         <p class="banner-text">
           {{ movie.overview }}
@@ -54,16 +55,6 @@
           class="img-cover"
         />
       </button>
-
-      <!-- <button #listItem class="poster-box slider-item">
-        <img 
-          src="../../../assets/assets/images/slider-control.jpg"
-          alt="Slide to Puss in Boots: The Last Wish"
-          loading="lazy"
-          draggable="false"
-          class="img-cover"
-        />
-      </button> -->
     </div>
   </div>
 </section>
