@@ -9,12 +9,12 @@ import { NetServerService } from 'src/app/services/net-server.service';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {
-  @Input() ListSearch: any;
-  public homeMemory: any;
+  @Input() state: any;
+  public openMenu: boolean = false;
+  // public openMenu: any;
 
-  //Atrapamos en home para enviar a galeria
-  atrapar(mensaje: any) {
-    this.homeMemory = mensaje;
-    // console.log('reciby ', this.homeMemory);
+  // Alternamos la apertura del menu
+  activated() {
+    this.openMenu = !this.openMenu;
   }
 }

@@ -8,42 +8,23 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import { userGuard } from './services/user.guard';
 import { MoviedetailsComponent } from './pages/moviedetails/moviedetails.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
-import { NhomeComponent } from './pages/nhome/nhome.component';
 import { DetailComponent } from './pages/detail/detail.component';
-import { UploadingComponent } from './pages/uploading/uploading.component';
+import { HeaderComponent } from './components/header/header.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: NhomeComponent,
-    pathMatch: 'full',
-  },
-  {
-    path: ' ',
-    component: NhomeComponent,
-    pathMatch: 'full',
-  },
-
-  {
-    path: 'oHome',
-    component: HomeComponent,
-    // ],
-  },
-  {
-    path: 'ohome',
     component: HomeComponent,
     pathMatch: 'full',
-    // children: [
-    //   {
-    //     path: '',
-    //     component:  ,
-    //   },
-    // ],
+  },
+  {
+    path: 'home',
+    component: HomeComponent,
+    pathMatch: 'full',
   },
   {
     path: 'details/:Id',
     component: DetailComponent,
-    pathMatch: 'full',
   },
   {
     path: 'welcome',
@@ -58,11 +39,6 @@ const routes: Routes = [
   {
     path: 'Signin',
     component: SigninComponent,
-    pathMatch: 'full',
-  },
-  {
-    path: 'u',
-    component: UploadingComponent,
     pathMatch: 'full',
   },
   {

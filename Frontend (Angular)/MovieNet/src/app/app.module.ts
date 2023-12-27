@@ -30,25 +30,12 @@ import { authInterceptorProviders } from './services/auth.interceptor';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { MoviedetailsComponent } from './pages/moviedetails/moviedetails.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
-import { NhomeComponent } from './pages/nhome/nhome.component';
 import { HomeSidebarComponent } from './components/home-sidebar/home-sidebar.component';
 import { BannerComponent } from './components/banner/banner.component';
 import { HeaderComponent } from './components/header/header.component';
 import { MovieListComponent } from './components/movie-list/movie-list.component';
 import { DetailComponent } from './pages/detail/detail.component';
-import { UploadingComponent } from './pages/uploading/uploading.component';
-
-
-
-import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
-import { MatNativeDateModule } from '@angular/material/core';
-import { DragDropModule } from '@angular/cdk/drag-drop';
-import { CdkTableModule } from '@angular/cdk/table';
-
-
-
-
+import { RecommendedListComponent } from './components/recommended-list/recommended-list.component';
 
 @NgModule({
   declarations: [
@@ -62,13 +49,12 @@ import { CdkTableModule } from '@angular/cdk/table';
     ProfileComponent,
     MoviedetailsComponent,
     SidebarComponent,
-    NhomeComponent,
     HomeSidebarComponent,
     BannerComponent,
     HeaderComponent,
     MovieListComponent,
     DetailComponent,
-    UploadingComponent,
+    RecommendedListComponent,
   ],
   imports: [
     InfiniteScrollModule,

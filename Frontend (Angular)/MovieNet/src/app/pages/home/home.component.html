@@ -1,2 +1,25 @@
-<app-navbar (enviar)="atrapar($event)"></app-navbar>
-<app-gallery [ListSearch]="homeMemory"></app-gallery>
+<body>
+  <!---------------- 
+      HEADER 
+    ------------------>
+  <app-header (toggleMenu)="activated()"></app-header>
+
+  <!---------------- 
+          SIDEBAR  
+      ------------------>
+  <app-home-sidebar [state]="openMenu"></app-home-sidebar>
+
+  <!-- se setea la clase "overlay active" para mostrar marco de la sidebar -->
+  <div
+    [ngClass]="openMenu ? 'overlay active' : 'overlay'"
+    overlay
+    menu-toogler
+  ></div>
+
+  <article class="container" page-content>
+    <!-- Banner -->
+    <app-banner></app-banner>
+    <!-- Movie List -->
+    <app-movie-list></app-movie-list>
+  </article>
+</body>

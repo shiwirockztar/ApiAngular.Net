@@ -38,9 +38,16 @@ export class ApiThemoviedbService {
   }
 
   // Obtenemos detalles de la pelicula
-  public getMovieDetail(movieId: any) {
+  public getDetailMovie(movieId: any) {
     return this.http.get(
       `https://api.themoviedb.org/3/movie/${movieId}?api_key=${api_key}&append_to_response=casts,videos,images,releases,translations`
+    );
+  }
+
+  // Obtenemos peliculas relacionadas
+  public getRecommendedMovie(movieId: any) {
+    return this.http.get(
+      `https://api.themoviedb.org/3/movie/${movieId}/recommendations?api_key=${api_key}`
     );
   }
 }

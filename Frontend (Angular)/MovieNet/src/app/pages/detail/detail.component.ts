@@ -5,10 +5,6 @@ import { DomSanitizer, Title } from '@angular/platform-browser';
 import { ApiThemoviedbService } from 'src/app/services/api-themoviedb.service';
 import { imageBaseUrl } from '../../services/helper';
 
-// style="
-// background-image: url('{{ imageUrl }}{{ size }}{{movie.backdrop_path || movie.poster_path}}');
-// "
-
 @Component({
   selector: 'app-detail',
   templateUrl: './detail.component.html',
@@ -48,7 +44,7 @@ export class DetailComponent implements OnInit {
   }
 
   getDetail(): void {
-    this.apiTMDB.getMovieDetail(this.detailId).subscribe((movie: any) => {
+    this.apiTMDB.getDetailMovie(this.detailId).subscribe((movie: any) => {
       if (movie) {
         const {
           backdrop_path,
