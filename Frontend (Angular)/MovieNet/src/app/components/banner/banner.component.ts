@@ -27,7 +27,7 @@ export class BannerComponent implements OnInit, AfterViewInit {
   public movieList: any = {};
   public imageUrl: any = imageBaseUrl;
 
-  constructor(private apiTMDB: ApiThemoviedbService) {}
+  constructor(private apiTMDB: ApiThemoviedbService, private router: Router) {}
 
   ngOnInit(): void {
     // Renderizar Banner por consumo de api
@@ -182,5 +182,9 @@ export class BannerComponent implements OnInit, AfterViewInit {
         }
       );
     });
+  }
+
+  link(movie: any): void {
+    this.router.navigate(['/details/' + movie.id]);
   }
 }

@@ -26,7 +26,11 @@
         <p class="banner-text">
           {{ movie.overview }}
         </p>
-        <a href="detail.html" class="btn"
+        <a
+          [routerLink]="'/details'"
+          href="details.html"
+          class="btn"
+          (click)="link(movie)"
           ><img
             src="../../../assets/assets/images/play_circle.png"
             height="24"

@@ -11,7 +11,11 @@
   <!--  
     se setea la clase "search-box active" para mostrar los elementos de buqueda    
   -->
-  <div [ngClass]="this.active ? 'search-box active' : 'search-box'" search-box>
+  <div
+    class="search-box"
+    [ngClass]="this.active ? 'search-box active' : 'search-box'"
+    search-box
+  >
     <!--  
         se setea la clase "search-wrapper searching" para activar en la busqueda la barra carga 
     -->
@@ -53,6 +57,7 @@
   </div>
 
   <button
+    class="menu-btn"
     [ngClass]="menuAbierto ? 'menu-btn active' : 'menu-btn'"
     menu-btn
     (click)="activ()"

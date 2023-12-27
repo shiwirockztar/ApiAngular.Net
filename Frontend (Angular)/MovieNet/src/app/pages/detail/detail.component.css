@@ -95,8 +95,3 @@
 .movie-card .meta-list {
   justify-content: space-between;
 }
-
-.movie-card .card-btn {
-  position: absolute;
-  inset: 0;
-}

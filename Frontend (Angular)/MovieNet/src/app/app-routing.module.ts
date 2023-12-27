@@ -10,6 +10,7 @@ import { MoviedetailsComponent } from './pages/moviedetails/moviedetails.compone
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { NhomeComponent } from './pages/nhome/nhome.component';
 import { DetailComponent } from './pages/detail/detail.component';
+import { UploadingComponent } from './pages/uploading/uploading.component';
 
 const routes: Routes = [
   {
@@ -40,14 +41,9 @@ const routes: Routes = [
     // ],
   },
   {
-    path: 'detail/:Id',
-    component: MoviedetailsComponent,
-    pathMatch: 'full',
-  },
-  {
     path: 'details/:Id',
     component: DetailComponent,
-    // pathMatch: 'full',
+    pathMatch: 'full',
   },
   {
     path: 'welcome',
@@ -62,6 +58,11 @@ const routes: Routes = [
   {
     path: 'Signin',
     component: SigninComponent,
+    pathMatch: 'full',
+  },
+  {
+    path: 'u',
+    component: UploadingComponent,
     pathMatch: 'full',
   },
   {

@@ -36,6 +36,19 @@ import { BannerComponent } from './components/banner/banner.component';
 import { HeaderComponent } from './components/header/header.component';
 import { MovieListComponent } from './components/movie-list/movie-list.component';
 import { DetailComponent } from './pages/detail/detail.component';
+import { UploadingComponent } from './pages/uploading/uploading.component';
+
+
+
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import { MatNativeDateModule } from '@angular/material/core';
+import { DragDropModule } from '@angular/cdk/drag-drop';
+import { CdkTableModule } from '@angular/cdk/table';
+
+
+
+
 
 @NgModule({
   declarations: [
@@ -55,6 +68,7 @@ import { DetailComponent } from './pages/detail/detail.component';
     HeaderComponent,
     MovieListComponent,
     DetailComponent,
+    UploadingComponent,
   ],
   imports: [
     InfiniteScrollModule,

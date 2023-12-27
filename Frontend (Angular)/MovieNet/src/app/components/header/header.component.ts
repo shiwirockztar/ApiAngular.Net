@@ -10,6 +10,11 @@ export class HeaderComponent {
   public active: boolean = false;
   public menuAbierto: boolean = false;
 
+  ngOnInit(): void {
+    this.active = false;
+    this.menuAbierto = false;
+  }
+
   public toggle() {
     this.active = !this.active;
   }
